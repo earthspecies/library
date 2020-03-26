@@ -1,3 +1,10 @@
 # Open Collaboration on Audio Classification
 
-Please check out the [Introduction](https://github.com/earthspecies/open_collaboration_on_audio_classification/blob/master/Introduction.ipynb) to learn more and get started!
+Please check out the [Introduction](https://github.com/earthspecies/open_collaboration_on_audio_classification/blob/master/introduction.ipynb) to learn more and get started!
+
+### Leaderboard
+
+| Epochs | URL | Error rate |
+|--|--|--|
+|6|[fatai2 audio xresnet18](https://github.com/AdPostma/open_collaboration_on_audio_classification)|0.002745|
+|2|[pretrained resnet18](https://github.com/AdPostma/open_collaboration_on_audio_classification)|0.063143|
