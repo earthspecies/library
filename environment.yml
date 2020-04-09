@@ -1,0 +1,11 @@
+name: fastai2
+channels:
+  - fastai
+  - pytorch
+  - defaults
+dependencies:
+  - jupyter
+  - pandas
+  - fastprogress>=0.1.22
+  - pip
+  - fastcore
