@@ -8,4 +8,3 @@ dependencies:
   - pandas
   - fastprogress>=0.1.22
   - pip
-  - fastcore
