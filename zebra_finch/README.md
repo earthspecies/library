@@ -1,4 +1,4 @@
-# zebra_finch (this is still a WIP - please proceed with caution)
+# zebra_finch
 
 3405 zebra finch calls classified across 11 call types. Additonal labels include name of individual making the vocalization and its age (chick or adult).
 
