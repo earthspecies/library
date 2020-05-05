@@ -1,4 +1,4 @@
-radek has suggested working directly on the timeseries as another approach. I'd like to present a starter notebook that hits 96% classification accuracy using only conv1d, two simple pooling functions, and a Linear classifier.
+radek has suggested working directly on the timeseries as another approach. I'd like to present a starter notebook that hits 97.3% classification accuracy using only conv1d, two simple pooling functions, and a Linear classifier...16,000 parameters.
 
 The method is called ROCKET. You may have seen it already discussed in  https://forums.fast.ai/t/time-series-sequential-data-study-group/29686. The original code and paper can be found at https://github.com/angus924/rocket.  For those not familiar, here is a brief overview.
 
@@ -20,13 +20,13 @@ Some further notes...
 3) There's some special magic in the ppv non-linearity. Combined with conv1d, it is exceptionally good at classifying time series in general. Why is that so?
 ---
 
-Notes on my initial implementation (based on Ignacio Oguiza's ROCKET demo at https://github.com/timeseriesAI/timeseriesAI -thanks!)
+Notes on my second implementation (based on Ignacio Oguiza's ROCKET demo at https://github.com/timeseriesAI/timeseriesAI -thanks!)
 
 > https://github.com/PomoML/ROCKET_Sound
 
 First, run notebook saveSounds. It saves the Macaque calls and names into ~.fastai. These will be loaded by the following notebook.
 
-Second, run notebook MacaqueROCKET for a demonstration of the ROCKET method. It requires fastai v1 only for the last section. These notebooks are not tested on servers. They were run locally only.
+Second, run notebook MacaqueROCKET for a demonstration of the ROCKET method. It requires fastai2 only for the last section. These notebooks are not tested on servers. They were run locally only.
 
 The biggest issue was dealing with variable length samples. ROCKET is not limited to fixed length samples, but works most straightforwardly with them. There is already discussion of this issue in depth in the Time Series Sequential Data Study Group. One simple idea is to pad each sample with zeros to the same (longest) length. However doing so drastically alters the max and ppv measures, and empirically decreases accuracy.
 
@@ -34,7 +34,7 @@ The primary problem with using different length samples is when randomly chosen 
 
 The issue is especially acute in PyTorch, because of course tensors have to be rectangular. I experimented extensively with conv1d to find out exactly how it handles padding with nans/zeros, when it errors out, etc. I think this ROCKET implementation is correct when samples are padded on the right with nan, even when the conv1d output is empty. It throws an error however when the input tensor input sample length dimension is too small for a particular conv1d.
 
-In the end, I did not tackle this last problem. Instead, I limited the dilations so that the shortest sample is always valid for every conv1d. This measured nearly as accurate as including larger dilations. Perhaps it's because we are identifying voice timbres by frequencies and formants. Such frequencies are already captured by the smaller dilations. If you are looking for larger structures in a call - the meaning or bass notes for instance - the larger dilations would be needed.
+In the end, I did not tackle this last problem. Instead, I limited the dilations so that the shortest sample is always valid for every conv1d. This measured nearly as accurate as including larger dilations. Perhaps it's because we are identifying voice timbres by frequencies and formants. Such frequencies are already captured by the smaller dilations. If you are looking for larger structures in a call - the meaning of bass notes for instance - the larger dilations would be needed.
 
 ---
 Notes on the problem...
@@ -48,16 +48,12 @@ Directions and ideas (in case anyone is inspired)
 
 - Replace the unused conv1d features with new random ones. Does accuracy keep improving?
 
-- Do the most predictive conv1d's have certain characteristics in common? If so, we get a sense of how to design a model based on conv1d.
+- Do the most predictive conv1d's have certain characteristics in common? If so, we get a sense of how to design a model based on conv1d. Some interesting visualizations are shown.
 
-- Find a better way to adapt ROCKET to time series with different lengths. Right now the space of dilations assumes the series has a fixed length. Many conv1d's with large dilations remain unused because they do not apply to short samples. Is there a way to better distribute the conv1d's to match the distribution of sample lengths?
+- Find a better way to adapt ROCKET to time series with different lengths. Right now the space of dilations assumes the series has a fixed length. Many conv1d's with large dilations remain unused because they do not apply to short samples. Is there a way to better distribute the conv1d's to match the distribution of sample lengths? In fact, changing the distribution of the dilations DOES help. See comments in rockersound1.py.
 
 - With a typical Linear/Cross entropy training on the features, would more layers find complex feature patterns that improve generalization?
 
 - Make a more efficient implementation that skips the overhead of nn.conv1d. We could go directly to F.conv because we already know the parameters are safe.
-
-- Fix the fastai section to work correctly and work with fastaiv2
-
-- I am severely lost with git and github  :confused:, but will try to learn enough to integrate contributions. I'll probably need to ask for help. :slightly_smiling_face:
 
 Thanks for reading and for code corrections!
