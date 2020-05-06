@@ -11,6 +11,16 @@ It is important to note that the weights and biases of the conv1d's are fixed. C
 Getting into opinion and speculation, I think ROCKET effectively does a search of the space of conv1d's by using a large universe of random kernel lengths, weights, biases, dilations, and paddings. The classifier selects which of these conv1d's are predictive of the training samples. Rather than predesigning the architecture as we typically do, this approach finds the conv1d's that work best for the problem.
 
 Such a search would be impossible using typical machine learning methods because most of its parameters are not differentiable wrt loss. Two non-linearities, both of which are also non-differentiable, then reduce the dimensionality of the conv1d outputs. IMO, there's great potential in this approach of using randomness to search the space of architectures and weights. You can find papers that suggest that the olfactory system's random connections work in a similar way. Also, see weight-agnostic architectures.
+-----------------------------
+
+Questions:
+
+Why does one take fixed Conv1d layers and not learn their parameters instead?
+
+I think the fundamental reason is that it is meant to be an entirely different approach than gradient descent. You make a huge number of cheap features (fixed, random) and let a simple linear classifier learn which ones are predictive. The usual ML methods can learn a kernel and a bias for a particular conv1d, but they cannot learn across kernel lengths and dilations. Those parameters are non-differentiable. The reduction to ppv and max is likewise non-differentiable. Therefore an optimizer can’t see the effect of varying bias and kernel weights.
+
+You could think of ROCKET as a way to search a very large parameter space that gradient descent cannot traverse. In a manner, it searches across model architectures. Instead of pre-defining a model with fixed conv dilations and ppv thresholds, the method finds which ones work the best.
+-------------------------------
 
 Some further notes...
 1) The various dilations of conv1d are able to extract the periodicities (frequencies) of the sounds, much as spectograms do. I think that's one reason ROCKET works well on this audio task. 
@@ -21,8 +31,6 @@ Some further notes...
 ---
 
 Notes on my second implementation (based on Ignacio Oguiza's ROCKET demo at https://github.com/timeseriesAI/timeseriesAI -thanks!)
-
-> https://github.com/PomoML/ROCKET_Sound
 
 First, run notebook saveSounds. It saves the Macaque calls and names into ~.fastai. These will be loaded by the following notebook.
 
