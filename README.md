@@ -1,6 +1,9 @@
 # The Earth Species Project library
 
-> curated audio datasets for animal research
+![includes-data](https://img.shields.io/badge/includes%20data-yes-green)
 
-* [zebra_finch](https://github.com/earthspecies/esp_library/tree/master/zebra_finch) - 3405 zebra finch calls classified across 11 call types. Additonal labels include name of individual making the vocalization and its age (chick or adult).
-* [macaques](https://github.com/earthspecies/esp_library/tree/master/macaques) - 7285 macaque coo calls from 8 individuals (4 males and 4 females)
+## Getting Started
+This is a collaborative development of techniques to classify/individuate
+macaques based on [bioacoustics cues](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230/) ('coos').
+
+Please check out the [Introduction](https://github.com/earthspecies/open_collaboration_on_audio_classification/blob/master/introduction.ipynb) to learn more and get started!
