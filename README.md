@@ -2,8 +2,6 @@
 
 ![includes-data](https://img.shields.io/badge/includes%20data-yes-green)
 
-## Getting Started
-This is a collaborative development of techniques to classify/individuate
-macaques based on [bioacoustics cues](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230/) ('coos').
-
-Please check out the [Introduction](https://github.com/earthspecies/open_collaboration_on_audio_classification/blob/master/introduction.ipynb) to learn more and get started!
+* [zebra_finch](https://github.com/earthspecies/esp_library/tree/master/zebra_finch) - 3405 zebra finch calls classified across 11 call types. Additonal labels include name of individual making the vocalization and its age (chick or adult).
+* [macaques](https://github.com/earthspecies/esp_library/tree/master/macaques) - 7285 macaque coo calls from 8 individuals (4 males and 4 females)
+* [giant otter](https://github.com/earthspecies/library/tree/master/giant_otter) - A tutorial demonstrating a complete ML pipeline applied to giant otter bioacoustics, beginning with data preprocessing, proceeding to load the data, and culminating in the construction and training of a CNN-based classifier capable of labeling giant otter vocalizations according to call type.
