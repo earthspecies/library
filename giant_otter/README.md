@@ -1,5 +1,7 @@
 # ML-Based Approach to Giant Otter Bioacoustics
 
+[![includes-data](https://img.shields.io/badge/includes%20data-yes-green?link=https://archive.org/details/giant_otters)](https://archive.org/details/giant_otters)
+
 ## Description
 A tutorial demonstrating a complete ML pipeline applied to giant otter bioacoustics, beginning with data preprocessing, proceeding to load the data, and culminating in the construction and training of a CNN-based classifier capable of labeling giant otter vocalizations according to call type.
 
