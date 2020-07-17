@@ -6,7 +6,7 @@
 This is a collaborative development of techniques to classify/individuate 
 macaques based on [7285 bioacoustics coo calls](https://datadryad.org/stash/dataset/doi:10.5061/dryad.7f4p9) from [Distributed acoustic cues for caller identity in macaque vocalization](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230)
 
-Please check out the [Introduction](https://github.com/earthspecies/library/blob/master/macaque/introduction.ipynb) to learn more and get started.
+Please check out the [Introduction](https://github.com/earthspecies/library/blob/master/macaques/introduction.ipynb) to learn more and get started.
 
 ### Leaderboard
 
