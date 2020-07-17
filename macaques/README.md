@@ -1,6 +1,6 @@
 # Open Collaboration on Macaque Audio Classification
 
-![includes-data](https://img.shields.io/badge/includes%20data-yes-green?link=https://archive.org/details/macaques_24414hz_202007)
+[![includes-data](https://img.shields.io/badge/includes%20data-yes-green?link=https://archive.org/details/macaques_24414hz_202007)](https://archive.org/details/macaques_24414hz_202007)
 
 ## Getting Started
 This is a collaborative development of techniques to classify/individuate 
