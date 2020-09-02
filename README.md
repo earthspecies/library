@@ -8,3 +8,13 @@
 
 All datasets are accessible by issuing a single command from within the [fastai v2 library](https://github.com/fastai/fastai2).
 
+## Available models
+
+| dataset | architecture |
+| :----------: |:-------------|
+| giant otter | [conv2d classifier with an interactive gui](https://github.com/earthspecies/library/blob/master/giant_otter/cnn-classifier-pipeline.ipynb)|
+|macaques|[conv1d classifier on raw audio](https://github.com/earthspecies/library/blob/master/macaques/fastai2_audio_conv1d.ipynb)|
+|macaques|[xresnet18 classifier with fastai audio](https://github.com/earthspecies/library/blob/master/macaques/fastai2_audio_xresnet18.ipynb)|
+|macaques|[pretrained resnet18 using fastai DataBlock api and error analysis](https://github.com/earthspecies/library/blob/master/macaques/introduction.ipynb)|
+|macaques|[ROCKET model extracting information from raw audio using conv1d without training](https://github.com/earthspecies/library/blob/master/macaques/ROCKET_Sound/MacaqueROCKET.ipynb)|
+|zebra finch|[pretrained resnet18 classifier with confusion matrix using fastai](https://github.com/earthspecies/library/blob/master/zebra_finch/example_of_working_with_the_dataset.ipynb)|
