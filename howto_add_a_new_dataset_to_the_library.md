@@ -1,6 +1,10 @@
-Please note - this is a work in progress. Construction site ahead - please proceed with care.
 
-# Howto add a new dataset to the ESP library
+
+| Work In Progress |
+| --- |
+| This document is under construction. |
+
+# How To Add a New Dataset to the ESP Library
 
 This document outlines steps to take to add a new dataset to the library. Datasets come in various shapes and sizes. The steps below describe the steps you most likely will want to take when adding a new dataset. Some changes to the procedure might need to be made to address the intricacies of the specific dataset you are working on.
 
