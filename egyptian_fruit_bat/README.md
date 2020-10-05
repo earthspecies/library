@@ -31,7 +31,7 @@ The Egyptian fruit bat datasets record interactions between bats located in isol
 
 ![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/class_dist_in_tiny.png)
 
-The class labels counts / datasample counts for the tiny annotated dataset were augmented so that there is more of an even distribution of labels. In the full annotated dataset, however, the class label distribution is greatly skewed with nearly 60% of class label counts being either `sleeping` or `feeding`. The audio signals were augmented using the [CQ transform](https://en.wikipedia.org/wiki/Constant-Q_transform) and some simple time-color encoding, more information on the data augmentation and the thought that went into it can be found in the notebooks `bat_spectrogram_tuner.ipynb` and `rainbow-ification_exploration.ipynb`. Below is what a few vocalization samples look like before they are fed into the model: 
+The class labels counts / datasample counts for the tiny annotated dataset were augmented so there is more of an even distribution of labels. In the full annotated dataset, however, the class label distribution is greatly skewed with nearly 60% of class label counts being either `sleeping` or `feeding`. The audio signals were augmented using the [CQ transform](https://en.wikipedia.org/wiki/Constant-Q_transform) and some simple time-color encoding, more information on the data augmentation and the thought that went into it can be found in the notebooks `bat_spectrogram_tuner.ipynb` and `rainbow-ification_exploration.ipynb`. Below is what a few vocalization samples look like before they are fed into the model: 
 
 ![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/batch_context_w_rainbows.png)
 
