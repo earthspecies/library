@@ -6,11 +6,17 @@
 
 # How To Add a New Dataset to the ESP Library
 
-This document outlines steps to take to add a new dataset to the library. Datasets come in various shapes and sizes. The steps below describe the steps you most likely will want to take when adding a new dataset. Some changes to the procedure might need to be made to address the intricacies of the specific dataset you are working on.
+This document outlines steps to take to add a new dataset to the Earth Species Library. The goal of the Library is to create a repository of the behavioral and culutral biodiversity of Earth, open to researchers and students alike, tuned for machine learning and augmented with tutorials.
+
+The steps below are a guide to finding, evaluating, tutorializing, and adding a new data set to the Earth Species Library. Datasets come in various shapes and sizes, so feel free to add your own findings, tips, and best practices to this document.
 
 1. Find a suitable dataset.
 
-The ESP library aims to share animal datasets (predominantly audio though mutlimodality is encouraged) that can be useful in bioacoustic research and conservationist efforts. The primary sources of our datasets are research datasets that have been put in the public domain (they can be found on the Internet) or direct contributions from collaborating researchers. For a list of datasets in the latter category please consult the document here [link to be added].
+The ESP Library aims to make animal behavior datasets open to a much broader machine learning audience to accelerate animal communication research and conservation efforts. The primary sources of our datasets are research datasets that have been put in the public domain (you can find them as attached material to research papers) or direct contributions from collaborating researchers.
+
+What makes for a good data set? Some factors to consider: Quanitity of the data, quality of recordings (is there background noise? multipe overlapping speakers? length of each vocalization), existance and quality of annotations, the licensce under which the data is shared.
+
+For a list of potential data sets to add to the ESP Library please consult the document here [link to be added].
 
 2. Download the dataset and perform exloratory analysis
 
