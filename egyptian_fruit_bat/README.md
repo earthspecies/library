@@ -1,6 +1,5 @@
 Exploring Egyptian Fruit Bat Vocalizations:
 ===
-
 This repository can serve as a brief introduction to working with the [Egyptian fruit bat datasets](https://www.nature.com/articles/sdata2017143). The full dataset contains ~300k vocalization samples,
 ~90k of which are annotated. 
 
@@ -15,7 +14,6 @@ the context of a vocalization interaction from a subset of the annotated dataset
 
 The Data:
 ===
-
 The data are split up into three lumps, one set containing everything from the source, another containing just the annotations, and another containing a small subset of the annotated data. The larger two datasets are quite large even in a zipped archive format (so be prepared to wait!) and have to be accessed using 7zip (since the files were 7zipped from the Figshare source). The script `efb_context_labeler.ipynb` shows how to download the data locally using `wget` and `7z`. 
 
 1. The full vocalization dataset can be found [here](https://archive.org/details/egyptian_fruit_bat) (~200 GiB unzipped)
@@ -26,7 +24,6 @@ The data are split up into three lumps, one set containing everything from the s
 
 Explorations:
 ===
-
 The Egyptian fruit bat datasets record interactions between bats located in isolation chambers. The vocalizations typically occur between two bats, one labeled as the `emitter` and the other the `receiver`, and the labels for the vocalization samples were observed/generated from synchronized video recordings (You can peruse the metadata [here](https://ia903204.us.archive.org/view_archive.php?archive=/19/items/egyptian_fruit_bat_annotated/egyptian_fruit_bat_annotated.zip&file=Metadata.pdf)). The notebook `efb_context_labeler.ipynb` attempts to characterize the "context" of a bat vocalization by studying the visual structure of the audio signal recorded during an interaction. Below is the "context" class label distribution for the `egyptian_fruit_bat_annotated_tiny` dataset: 
 
 ![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/class_dist_in_tiny.png)
@@ -34,4 +31,23 @@ The Egyptian fruit bat datasets record interactions between bats located in isol
 The class labels counts / datasample counts for the tiny annotated dataset were augmented so there is more of an even distribution of labels. In the full annotated dataset, however, the class label distribution is greatly skewed with nearly 60% of class label counts being either `sleeping` or `feeding`. The audio signals were augmented using the [CQ transform](https://en.wikipedia.org/wiki/Constant-Q_transform) and some simple time-color encoding, more information on the data augmentation and the thought that went into it can be found in the notebooks `bat_spectrogram_tuner.ipynb` and `rainbow-ification_exploration.ipynb`. Below is what a few vocalization samples look like before they are fed into the model: 
 
 ![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/batch_context_w_rainbows.png)
+
+Results:
+===
+Training on the rainbow-ified CQ-transformed vocalization signals, a pretrained `resnet34`fastai model achieved 55% accuracy on predicting the context classes shown above. Below is the model performance over 12 epochs:
+
+![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/efbresnet34_training.png)
+
+Some overfitting occurs near the end of training, and some more care could be taken here to prevent this. The model performs quite well on some classes over others, as you can see from the confusion matrix below:
+
+![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/conf_matrix.png)
+
+Some labels like "grooming" or "kissing" are the hardest for the model to predict, and the ambiguity between some labels like "fighting" versus "biting" are obvious roadblocks. Further work will be done soon to study the clustering of bat vocalizations using GANs and tsne plots!
+
+Potential Next Steps:
+===
+* Some work could be done to mitigate the regularization of the model to improve model performance. For example: working with different subsets of the data, changing model architecture, or exploring different avenues of data augmentation. 
+
+* In the research paper found [here](https://www.nature.com/articles/srep39419), a model was trained to predict 4 categories of vocalization context and achieved 50% accuracy, and it might be insightful to attempt to reproduce and potentially improve these results. 
+
 
