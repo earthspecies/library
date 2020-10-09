@@ -62,7 +62,7 @@ Egyptian_fruit_bat_unzipped
 └── files224/
 ```
 
-The directories `files###` are where the WAV-type audio vocalizations are stored, and the csv's are where the file info and annotations can be found.The file `better_annotations.csv` is does not actually make the annotations any better than they already are, it simply joins the information contained in the original `Annotations.csv` with the file information in `FileInfo.csv`. (Joining the file ID and annotations for each file with the file name and path so that we can more easily grab the annotations for each file) 
+The directories `files###` are where the WAV-type audio vocalizations are stored, and the csv's are where the file info and annotations can be found. The file `better_annotations.csv` does not actually make the annotations any better than they already are, it simply joins the information contained in the original `Annotations.csv` with the file information in `FileInfo.csv`. (Joining the file ID and annotations for each file with the file name and path so that we can more easily grab the annotations for each file) 
 
 
 Explorations:
