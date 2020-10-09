@@ -14,7 +14,7 @@ the context of a vocalization interaction from a subset of the annotated dataset
 
 The Data:
 ===
-The original bat vocalization data was recorded and labeled by 
+The original bat vocalization data was recorded and labeled by [Yossi Yovel](http://www.yossiyovel.com/index.php/publications) and his team. This data set must have taken an incredible amount of work, with 300k unique vocalizations recorded and 90k labeled annotations, and we are so thankful to be able to use it! You can view the original paper publishing the data [here](https://www.nature.com/articles/sdata2017143). 
 
 The data are split up into three lumps, one set containing everything from the source, another containing just the annotations, and another containing a small subset of the annotated data. The larger two datasets are quite large even in a zipped archive format (so be prepared to wait!) and have to be accessed using 7zip (since the files were 7zipped from the Figshare source). The script `efb_context_labeler.ipynb` shows how to download the data locally using `wget` and `7z`. 
 
@@ -23,6 +23,47 @@ The data are split up into three lumps, one set containing everything from the s
 2. The full set of annotated vocalizations can be found [here](https://archive.org/details/egyptian_fruit_bat_annotated) (~125 GiB unzipped)
 
 3. A "tiny" subset of the annotated vocalizations can be found [here](https://archive.org/details/egyptian_fruit_bat_annotated_tiny) (~10 GiB unzipped)
+
+All of the subsets of the original data are split up in the same way:
+```
+Egyptian_fruit_bat_unzipped
+├── Annotations.csv
+├── better_annotations.csv
+├── FileInfo.csv
+├── files101/
+├── files102/
+├── files103/
+├── files104/
+├── files105/
+├── files106/
+├── files201/
+├── files202/
+├── files203/
+├── files204/
+├── files205/
+├── files206/
+├── files207/
+├── files208/
+├── files209/
+├── files210/
+├── files211/
+├── files212/
+├── files213/
+├── files214/
+├── files215/
+├── files216/
+├── files217/
+├── files218/
+├── files219/
+├── files220/
+├── files221/
+├── files222/
+├── files223/
+└── files224/
+```
+
+The directories `files###` are where the WAV-type audio vocalizations are stored, and the csv's are where the file info and annotations can be found.The file `better_annotations.csv` is does not actually make the annotations any better than they already are, it simply joins the information contained in the original `Annotations.csv` with the file information in `FileInfo.csv`. (Joining the file ID and annotations for each file with the file name and path so that we can more easily grab the annotations for each file) 
+
 
 Explorations:
 ===
