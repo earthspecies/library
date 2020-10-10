@@ -1,6 +1,5 @@
 Exploring Egyptian Fruit Bat Vocalizations:
 ===
-
 This repository can serve as a brief introduction to working with the [Egyptian fruit bat datasets](https://www.nature.com/articles/sdata2017143). The full dataset contains ~300k vocalization samples,
 ~90k of which are annotated. 
 
@@ -15,6 +14,7 @@ the context of a vocalization interaction from a subset of the annotated dataset
 
 The Data:
 ===
+The original bat vocalization data was recorded and labeled by [Yossi Yovel](http://www.yossiyovel.com/index.php/publications) and his team. This data set must have taken an incredible amount of work, with 300k unique vocalizations recorded and 90k labeled annotations, and we are so thankful to be able to use it! You can view the original paper publishing the data [here](https://www.nature.com/articles/sdata2017143). 
 
 The data are split up into three lumps, one set containing everything from the source, another containing just the annotations, and another containing a small subset of the annotated data. The larger two datasets are quite large even in a zipped archive format (so be prepared to wait!) and have to be accessed using 7zip (since the files were 7zipped from the Figshare source). The script `efb_context_labeler.ipynb` shows how to download the data locally using `wget` and `7z`. 
 
@@ -23,3 +23,74 @@ The data are split up into three lumps, one set containing everything from the s
 2. The full set of annotated vocalizations can be found [here](https://archive.org/details/egyptian_fruit_bat_annotated) (~125 GiB unzipped)
 
 3. A "tiny" subset of the annotated vocalizations can be found [here](https://archive.org/details/egyptian_fruit_bat_annotated_tiny) (~10 GiB unzipped)
+
+All of the subsets of the original data are split up in the same way:
+```
+Egyptian_fruit_bat_unzipped
+├── Annotations.csv
+├── better_annotations.csv
+├── FileInfo.csv
+├── files101/
+├── files102/
+├── files103/
+├── files104/
+├── files105/
+├── files106/
+├── files201/
+├── files202/
+├── files203/
+├── files204/
+├── files205/
+├── files206/
+├── files207/
+├── files208/
+├── files209/
+├── files210/
+├── files211/
+├── files212/
+├── files213/
+├── files214/
+├── files215/
+├── files216/
+├── files217/
+├── files218/
+├── files219/
+├── files220/
+├── files221/
+├── files222/
+├── files223/
+└── files224/
+```
+
+The directories `files###` are where the WAV-type audio vocalizations are stored, and the csv's are where the file info and annotations can be found. The file `better_annotations.csv` does not actually make the annotations any better than they already are, it simply joins the information contained in the original `Annotations.csv` with the file information in `FileInfo.csv`. (Joining the file ID and annotations for each file with the file name and path so that we can more easily grab the annotations for each file) 
+
+
+Explorations:
+===
+The Egyptian fruit bat datasets record interactions between bats located in isolation chambers. The vocalizations typically occur between two bats, one labeled as the `emitter` and the other the `receiver`, and the labels for the vocalization samples were observed/generated from synchronized video recordings (You can peruse the metadata [here](https://ia903204.us.archive.org/view_archive.php?archive=/19/items/egyptian_fruit_bat_annotated/egyptian_fruit_bat_annotated.zip&file=Metadata.pdf)). The notebook `efb_context_labeler.ipynb` attempts to characterize the "context" of a bat vocalization by studying the visual structure of the audio signal recorded during an interaction. Below is the "context" class label distribution for the `egyptian_fruit_bat_annotated_tiny` dataset: 
+
+![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/class_dist_in_tiny.png)
+
+The class labels counts / datasample counts for the tiny annotated dataset were augmented so there is more of an even distribution of labels. In the full annotated dataset, however, the class label distribution is greatly skewed with nearly 60% of class label counts being either `sleeping` or `feeding`. The audio signals were augmented using the [CQ transform](https://en.wikipedia.org/wiki/Constant-Q_transform) and some simple time-color encoding, more information on the data augmentation and the thought that went into it can be found in the notebooks `bat_spectrogram_tuner.ipynb` and `rainbow-ification_exploration.ipynb`. Below is what a few vocalization samples look like before they are fed into the model: 
+
+![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/batch_context_w_rainbows.png)
+
+Results:
+===
+Training on the rainbow-ified CQ-transformed vocalization signals, a pretrained `resnet34`fastai model achieved 55% accuracy on predicting the context classes shown above. Below is the model performance over 12 epochs:
+
+![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/efbresnet34_training.png)
+
+Some overfitting occurs near the end of training, and some more care could be taken here to prevent this. The model performs quite well on some classes over others, as you can see from the confusion matrix below:
+
+![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/conf_matrix.png)
+
+Some labels like "grooming" or "kissing" are the hardest for the model to predict, and the ambiguity between some labels like "fighting" versus "biting" are obvious roadblocks. Further work will be done soon to study the clustering of bat vocalizations using GANs and tsne plots!
+
+Potential Next Steps:
+===
+* Some work could be done to mitigate the regularization of the model to improve model performance. For example: working with different subsets of the data, changing model architecture, or exploring different avenues of data augmentation. 
+
+* In the research paper found [here](https://www.nature.com/articles/srep39419), a model was trained to predict 4 categories of vocalization context and achieved 50% accuracy, and it might be insightful to attempt to reproduce and potentially improve these results. 
+
+
