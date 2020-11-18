@@ -67,27 +67,19 @@ The directories `files###` are where the WAV-type audio vocalizations are stored
 Prat, Yosef; Taub, Mor; Pratt, Ester; Yovel, Yossi (2017): An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny. figshare. Collection. https://doi.org/10.6084/m9.figshare.c.3666502.v2
 
 
-Explorations:
+Explorations and Results:
 ===
-The Egyptian fruit bat datasets record interactions between bats located in isolation chambers. The vocalizations typically occur between two bats, one labeled as the `emitter` and the other the `receiver`, and the labels for the vocalization samples were observed/generated from synchronized video recordings (You can peruse the metadata [here](https://ia903204.us.archive.org/view_archive.php?archive=/19/items/egyptian_fruit_bat_annotated/egyptian_fruit_bat_annotated.zip&file=Metadata.pdf)). The notebook `efb_context_labeler.ipynb` attempts to characterize the "context" of a bat vocalization by studying the visual structure of the audio signal recorded during an interaction. Below is the "context" class label distribution for the `egyptian_fruit_bat_annotated_tiny` dataset: 
+The Egyptian fruit bat datasets record interactions between bats located in isolation chambers. The vocalizations typically occur between two bats, one labeled as the `emitter` and the other the `receiver`, and the labels for the vocalization samples were observed/generated from synchronized video recordings (You can peruse the metadata [here](https://ia903204.us.archive.org/view_archive.php?archive=/19/items/egyptian_fruit_bat_annotated/egyptian_fruit_bat_annotated.zip&file=Metadata.pdf)). The notebook `efb_context_labeler.ipynb` attempts to characterize the context (as labeled in the provided dataset) of a bat vocalization by studying the visual structure of the audio signal recorded during an interaction. Below is the "context" class label distribution for the `egyptian_fruit_bat_annotated_tiny` dataset: 
 
 ![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/class_dist_in_tiny.png)
 
-The class labels counts / datasample counts for the tiny annotated dataset were augmented so there is more of an even distribution of labels. In the full annotated dataset, however, the class label distribution is greatly skewed with nearly 60% of class label counts being either `sleeping` or `feeding`. The audio signals were augmented using the [CQ transform](https://en.wikipedia.org/wiki/Constant-Q_transform) and some simple time-color encoding, more information on the data augmentation and the thought that went into it can be found in the notebooks `bat_spectrogram_tuner.ipynb` and `rainbow-ification_exploration.ipynb`. Below is what a few vocalization samples look like before they are fed into the model: 
+The class labels counts / datasample counts for the tiny annotated dataset were augmented so there is more of an even distribution of labels. In the full annotated dataset, however, the class label distribution is greatly skewed with nearly 60% of class label counts being either `sleeping` or `feeding`. In the notebook `efb_context_labeler.ipynb`, the audio signals were augmented using the [CQ transform](https://en.wikipedia.org/wiki/Constant-Q_transform) and some simple time-color encoding, more information on the data augmentation and the thought that went into it can be found in the notebooks `bat_spectrogram_tuner.ipynb` and `rainbow-ification_exploration.ipynb`. The off-the-shelf model trained in `efb_context_labeler.ipynb` only achieved around 55% accuracy.
 
-![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/batch_context_w_rainbows.png)
+The low accuracy achieved by the model in `efb_context_labeler.ipynb` inspired further explorations into the clustering of the image-space of the bat vocalizations. Clustering analysis was carried out in the notebook `efb_vocalization_PCA.ipynb`, where PCA was applied to a random subset of CQ transformed bat vocalizations. The pairwise distance between embedded clusters with different context labels was measured, and it was found that in some cases the model has a harder time discerning between clusters whose approximate Jensen-Shannon distance was smaller (not too surprising that similar clusters are harder to distinguish, but the qualitative validation was nice). For reference, a t-SNE clustering of bat vocalizations labeled by context can be found below:
 
-Results:
-===
-Training on the rainbow-ified CQ-transformed vocalization signals, a pretrained `resnet34`fastai model achieved 55% accuracy on predicting the context classes shown above. Below is the model performance over 12 epochs:
+![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/context.png)
 
-![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/efbresnet34_training.png)
-
-Some overfitting occurs near the end of training, and some more care could be taken here to prevent this. The model performs quite well on some classes over others, as you can see from the confusion matrix below:
-
-![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/conf_matrix.png)
-
-Some labels like "grooming" or "kissing" are the hardest for the model to predict, and the ambiguity between some labels like "fighting" versus "biting" are obvious roadblocks. Further work will be done soon to study the clustering of bat vocalizations using GANs and tsne plots!
+From here, more explorations were conducted on improving the 'rainbow-ification', by creating more custom models and layers to explore better ways of working with the data. A stronger form of 'rainbow-ification' (or just positional encoding) was developed and tested in the notebook `efb_context_labeler_pos_enc .ipynb`. A simple custom convolutional model was used to compare the positional encoding layer to the baseline (no positional encoding) in the notebook `efb_context_labeler_pos_enc_comparison.ipynb`, and it was observed that this flavor of positional encoding may improve model accuracy/understanding of the provided data.  
 
 Potential Next Steps:
 ===
