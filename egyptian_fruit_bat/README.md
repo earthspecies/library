@@ -1,7 +1,7 @@
 Exploring Egyptian Fruit Bat Vocalizations:
 ===
 This repository can serve as a brief introduction to working with the [Egyptian fruit bat datasets](https://www.nature.com/articles/sdata2017143). The full dataset contains ~300k vocalization samples,
-~90k of which are annotated. 
+~90k of which are annotated. A brief description of the scripts above can be found in the list below, with more discussion on the objectives and results of the notebooks in the 'Explorations and Results' section. 
 
 * In the script `efb_context_labeler.ipynb`, we train a resnet model to predict
 the context of a vocalization interaction from a subset of the annotated dataset. 
@@ -11,6 +11,20 @@ the context of a vocalization interaction from a subset of the annotated dataset
 * The file `relevant_file_info.zip` contains the metadata, annotations, and file information for the vocalization data should anyone need it.
 
 * The script `bat_file_handler_sandbox.py` is the sandbox of functions and processes used to disperse the larger dataset into smaller chunks.
+
+* The script `efb_vocalization_PCA.ipynb` delves into the clustering of bat vocalizations, and investigates the distances between clusters labeled by different contexts. 
+
+* The notebook `efb_context_labeler_pos_enc .ipynb` is a more custom extension of the original context labeling model, exploring the use of stronger positional encoding compared to 'rainbow-ification'. 
+
+* The notebook `efb_context_labeler_pos_enc_comparison.ipynb` just compares convolutional models with and without positional encoding. 
+
+* In the notebook `efb_voc_comp_unet.ipynb`, a custom dynamic unet with positional encoding was trained to complete bat vocalizations given a truncated call (WIP).
+
+* The notebook `efb_vae.ipynb` explores a custom autoencoding architecture, with the hopes of probing the embedding layers for further clustering analysis (WIP).
+
+
+
+
 
 The Data:
 ===
@@ -79,7 +93,9 @@ The low accuracy achieved by the model in `efb_context_labeler.ipynb` inspired f
 
 ![alt text](https://github.com/oliver-adams-b/library/blob/main/egyptian_fruit_bat/images/context.png)
 
-From here, more explorations were conducted on improving the 'rainbow-ification', by creating more custom models and layers to explore better ways of working with the data. A stronger form of 'rainbow-ification' (or just positional encoding) was developed and tested in the notebook `efb_context_labeler_pos_enc .ipynb`. A simple custom convolutional model was used to compare the positional encoding layer to the baseline (no positional encoding) in the notebook `efb_context_labeler_pos_enc_comparison.ipynb`, and it was observed that this flavor of positional encoding may improve model accuracy/understanding of the provided data.  
+From here, more explorations were conducted on improving the 'rainbow-ification' by creating more custom models and layers to explore better ways of working with the data. A stronger form of 'rainbow-ification' (or just positional encoding) was developed and tested in the notebook `efb_context_labeler_pos_enc .ipynb`. A simple custom convolutional model was used to compare the positional encoding layer to the baseline (no positional encoding) in the notebook `efb_context_labeler_pos_enc_comparison.ipynb`, and it was observed that this flavor of positional encoding may improve model accuracy/understanding of the provided data.  
+
+After the positional encoding layer showed some promise, it was put to good use in the notebooks `efb_voc_comp_unet.ipynb` and `efb_vae.ipynb`. In the notebook `efb_voc_comp_unet.ipynb`, a dyanmic unet was fed the first half of a bat vocalization and was tasked in completing the remainder of the vocalization (to some success). In the notebook `efb_vae.ipynb`, a simple autoencoder was explored with the hopes that the embedding layers may shed more light on the clustering of context labels (still a work in progress). 
 
 Potential Next Steps:
 ===
