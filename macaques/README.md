@@ -4,7 +4,7 @@
 
 ## Getting Started
 This is a collaborative development of techniques to classify/individuate 
-macaques based on [7285 bioacoustics coo calls](https://datadryad.org/stash/dataset/doi:10.5061/dryad.7f4p9) from Fukushima, Makoto et al. [Distributed acoustic cues for caller identity in macaque vocalization](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230), Royal Society open science vol. 2,12 150432. 23 Dec. 2015, doi:10.1098/rsos.150432
+macaques based on [7285 bioacoustics coo calls](https://datadryad.org/stash/dataset/doi:10.5061/dryad.7f4p9) from Fukushima, Makoto et al. [Distributed acoustic cues for caller identity in macaque vocalization](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230), Royal Society open science vol. 2,12 150432. 23 Dec. 2015, doi:10.1098/rsos.150432.
 
 Please check out the [Introduction](https://github.com/earthspecies/library/blob/master/macaques/introduction.ipynb) to learn more and get started.
 
