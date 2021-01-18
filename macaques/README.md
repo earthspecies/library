@@ -2,7 +2,7 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Bonnet_macaque_%28Macaca_radiata%29_Photograph_By_Shantanu_Kuveskar.jpg" alt="A macaque" width="120" align="left">
 
-The macaques inhabit ranges throughout Asia, North Africa, and Gibraltar. They are principally frugivorous (preferring fruit), although their diet also includes seeds, leaves, flowers, and tree bark. All macaque social groups are matriarchal, arranged around dominant females. Aside from humans (genus Homo), the macaques are the most widespread primate genus.
+The [macaques](https://en.wikipedia.org/wiki/Macaque) inhabit ranges throughout Asia, North Africa, and Gibraltar. They are principally frugivorous (preferring fruit), although their diet also includes seeds, leaves, flowers, and tree bark. All macaque social groups are matriarchal, arranged around dominant females. Aside from humans (genus Homo), the macaques are the most widespread primate genus.
 
 
 ## Dataset information
