@@ -8,7 +8,7 @@ The [macaques](https://en.wikipedia.org/wiki/Macaque) inhabit ranges throughout 
 ## Dataset information
 
 This dataset has been shared as part of the [Distributed acoustic cues for caller identity in macaque vocalization
-](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230/) paper. It contains 7285 macaque coo calls from 8 individuals (4 males and 4 females).
+](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230/) paper. It contains 7285 macaque coo calls from 8 individuals (4 males and 4 females) with labels at the individual level.
 
 The original dataset can be downloaded from [Data Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.7f4p9). We offer a peprocessed version amenable to applying machine learning techniques. The 01_Data_Preprocessing notebook (TODO: link to it after merge) documents the preprocessing steps applied to the dataset.
 
