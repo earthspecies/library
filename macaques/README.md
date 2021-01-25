@@ -7,9 +7,9 @@ The [macaques](https://en.wikipedia.org/wiki/Macaque) inhabit ranges throughout 
 
 ## Dataset information
 
-This dataset has been shared as part of the [Distributed acoustic cues for caller identity in macaque vocalization
-](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230/) paper. It contains 7285 macaque coo calls from 8 individuals (4 males and 4 females) with labels at the individual level.
+This dataset contains 7285 macaque coo calls from 8 individuals (4 males and 4 females) with labels at the individual level. 5756 vocalizations have been recorded with a sampling rate of 24414 Hz and 1529 with a sampling rate of 44100 Hz. The duration of wav files varies from 896 frames to 37308 frames (0.04s to 1.69s).
 
-The original dataset can be downloaded from [Data Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.7f4p9). We offer a peprocessed version amenable to applying machine learning techniques. The 01_Data_Preprocessing notebook (TODO: link to it after merge) documents the preprocessing steps applied to the dataset.
+Data is [available for download] from Internet Archive as a single zip file. This is a version of the dataset that has been peprocessed by us to facilitate the application of machine learning techniques. The preprocessing steps that have been taken are documented in the 99_Data_Preprocessing notebook. The instructions for the download of the dataset and for constructing datasets for training PyTorch deep learning models are provided in the 01_Download_The_Data_And_Construct_Dataloaders notebook.
 
-The 02_TBD (TODO: link when ready) notebook demonstrates how to create a dataset from this data and how to perform speaker identification using a Deep Learning method. In the paper, on the same task, classical bioacoustic methods achieve a mean accuracy of 80%. The Deep Learning method, without extensive fine tuning, achieves an accuracy of XX%.
+This dataset has been collected and shared by shared as part Makoto Fukushima, Alex M. Doyle, Matthew
+P. Mullarkey, Mortimer Mishkin and Bruno B. Averbeck under the [Distributed acoustic cues for caller identity in macaque vocalization](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230/) paper. The original dataset can be downloaded from [Data Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.7f4p9). 
