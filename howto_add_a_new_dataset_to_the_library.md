@@ -37,7 +37,7 @@ The results of this phase should be:
 ## Dataset uploaded to Internet Archive
 
 *   Package the dataset using this `zip -qr <name_of_archive>.zip annotations.csv <directory_to_include>` command.
-*   upload to Internet Archive adding to the Earth Species Collection (include any relevant information as metadata, such as data license, etc)
+*   upload to Internet Archive adding to the [Earth Species Project collection](https://archive.org/details/earth-species-project) (include any relevant information as metadata, such as data license, etc)
 
 ## Create notebooks demonstrating how to download and work with the dataset
 
