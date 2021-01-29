@@ -26,7 +26,7 @@ Often data is entered manually by human annotators, which can be a painstaking a
 *   Do the labels follow a consistent format, or are there any issues? 
 *   When you work on the preprocessed data, is it easy to load everything up?
 
-For a set of guidelines for what an ML ready dataset might look like, please consult the document here [link to be added].
+For a set of guidelines for what an ML ready dataset might look like, please consult [this document](https://archive.org/details/earth-species-project).
 
 The results of this phase should be:
 
