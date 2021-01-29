@@ -15,5 +15,7 @@ Data is available for download from Internet Archive as [a single zip file](http
 1. [How to download the dataset](https://github.com/earthspecies/library/blob/main/macaques/01_Download_Dataset.ipynb).
 2. [How to construct PyTorch dataloaders on this data](https://github.com/earthspecies/library/blob/main/macaques/02_Create_PyTorch_DataLoaders.ipynb).
 
+## Citations
+
 This dataset has been collected and shared by Makoto Fukushima, Alex M. Doyle, Matthew
 P. Mullarkey, Mortimer Mishkin and Bruno B. Averbeck under the [Distributed acoustic cues for caller identity in macaque vocalization](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4806230/) paper. The original dataset can be downloaded from [Data Dryad](https://datadryad.org/stash/dataset/doi:10.5061/dryad.7f4p9). 
