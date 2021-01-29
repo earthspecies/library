@@ -1,4 +1,8 @@
-# **How To Add a New Dataset to the Earth Species Library**
+| Work In Progress |
+| --- |
+| This document is under construction. |
+
+# How To Add a New Dataset to the Earth Species Library
 
 This document outlines steps to take to add a new dataset to the Library. Datasets come in various shapes and sizes. These steps describe the most likely approach when adding a new dataset. However, some changes to the procedure may be necessary to address the intricacies of specific datasets. 
 
