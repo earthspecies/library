@@ -24,23 +24,14 @@ Often data is entered manually by human annotators, which can be a painstaking a
 *   Do the labels follow a consistent format, or are there any issues? 
 *   When you work on the preprocessed data, is it easy to load everything up?
 
-For a set of guidelines for what an ML ready dataset might look like, please consult [this document](https://archive.org/details/earth-species-project).
-
 The results of this phase should be:
 
-*   preprocessed dataset
+*   the preprocessed dataset
 *   a notebook portraying and explaining the rationale behind the steps applied to the data
-
 
 ## Dataset uploaded to Internet Archive
 
 *   Package the dataset using this `zip -qr <name_of_archive>.zip annotations.csv <directory_to_include>` command.
-*   upload to Internet Archive adding to the [Earth Species Project collection](https://archive.org/details/earth-species-project) (include any relevant information as metadata, such as data license, etc)
+*   upload to Internet Archive, include any relevant information as metadata, such as data license, etc
 
-## Create notebooks demonstrating how to download and work with the dataset
-
-## Next steps
-
-*   Add a ‘future work/potential next steps’ section to your README so that future collaborators can extend your work! If your models have room for growth, spell out the avenues down which people can explore and progress the research! If you have an abundance of ideas, be sure to jot them down so that you may inspire other people to pick up where you left off!
-
-Congratulations! Now that you have submitted the PR, you can continue adding models and sharing your findings with the research community! Thank you for all your fantastic work!
+Congratulations! The next step is to submit a PR, to continue adding models and sharing your findings with the research community! Thank you for all your fantastic work!
