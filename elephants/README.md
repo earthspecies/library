@@ -1,6 +1,6 @@
 # Elephants
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/African_Elephant_%28Loxodonta_africana%29_male_%2817289351322%29.jpg" alt="An elephant" width="120" align="left">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/African_Elephant_%28Loxodonta_africana%29_male_%2817289351322%29.jpg/440px-African_Elephant_%28Loxodonta_africana%29_male_%2817289351322%29.jpg" alt="An elephant" width="120" align="left">
 
 The [African elephant](https://en.wikipedia.org/wiki/African_elephant) (Loxodonta) is a genus comprising two living elephant species, the African bush elephant (L. africana) and the smaller African forest elephant (L. cyclotis). Both are social herbivores with grey skin, but differ in the size and color of their tusks and in the shape and size of their ears and skulls.
 
