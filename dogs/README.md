@@ -22,4 +22,4 @@ You can download the preprocessed dataset [here](https://archive.org/details/dog
 
 1. [How to download the dataset](https://github.com/earthspecies/library/blob/main/dogs/01_Download_Dataset.ipynb).
 2. [How to construct PyTorch dataloaders for classification](https://github.com/earthspecies/library/blob/main/dogs/02_Create_PyTorch_DataLoaders.ipynb).
-3. [How to construct PyTorch dataloaders for the cocktail party problem](https://github.com/earthspecies/library/blob/main/macaques/03_Construct_PyTorch_Dataloaders_for_CPP.ipynb).
+3. [How the original dataset was preprocessed (with a documentation of all the steps taken)](https://github.com/earthspecies/library/blob/main/dogs/99_Data_Preprocessing.ipynb).
