@@ -12,9 +12,9 @@ s are the most widespread primate genus.
 
 This dataset comes from the [Orcasound Project](https://www.orcasound.net/). We share two versions of the dataset - one suited for classification and the other for other research tasks. The audio has been recorded with an SR of 44100 Hz.
 
-The dataset intended for classification consists of 4 second examples, and contains 398 positive examples and 196 negative examples. It can be downloaded from Internet Archive here.
+The dataset intended for classification consists of 4 second examples, and contains 398 positive examples and 196 negative examples. It can be downloaded from Internet Archive [here](https://archive.org/details/orcas_classification).
 
-The dataset suited for indexing into a recording consits of a single 30 minute long wave file. It comes with annotations that pinpoint each of the 398 calls in the recording. It can be downloaded from Internet Archive here>
+The dataset suited for indexing into a recording consits of a single 30 minute long wave file. It comes with annotations that pinpoint each of the 398 calls in the recording (annotated by Scott Veirs). It can be downloaded from Internet Archive [here](https://archive.org/details/orcas_offsets).
 
 ## Table of contents
 
