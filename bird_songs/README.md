@@ -14,6 +14,6 @@ This dataset consists of songs and calls of multiple bird species (87 distinct l
 
 ## Table of contents
 
-1. [How to download the dataset](https://github.com/earthspecies/library/blob/main/macaques/01_Download_Dataset.ipynb).
-2. [How to construct PyTorch dataloaders for classification](https://github.com/earthspecies/library/blob/main/macaques/02_Create_PyTorch_DataLoaders.ipynb).
+1. [How to download the dataset](https://github.com/earthspecies/library/blob/main/bird_songs/01_Download_Dataset.ipynb).
+2. [How to construct PyTorch dataloaders for classification](https://github.com/earthspecies/library/blob/main/bird_songs/02_Create_PyTorch_DataLoaders.ipynb).
 
