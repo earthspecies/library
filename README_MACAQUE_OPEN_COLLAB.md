@@ -8,3 +8,4 @@
 * [Egyptian fruit bats](https://github.com/earthspecies/library/tree/main/egyptian_fruit_bat)- Approximately 8k Egyptian fruit bat vocalizations classified on interaction context using fastai's pretrained resnet models.
 * [dogs](https://github.com/earthspecies/library/tree/main/dogs) - 693 recordings of dog barks. 10 adult dogs, Canis familiaris, of six breeds recorded in three different situations
 * [orcas](https://github.com/earthspecies/library/tree/main/orcas) - two datasets created from 30 minutes of recording by the [Orcasound Project](https://www.orcasound.net/) consisting of 398 labeled orca calls.
+* [bird songs](https://github.com/earthspecies/library/tree/main/bird_songs) - 686 recordings of bird vocalizations with 87 labels, duration varies from just over 1 seconds to just over 5 seconds.
