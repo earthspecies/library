@@ -7,9 +7,9 @@
 
 ## Dataset Information
 
-This dataset consists of songs and calls of multiple bird species (87 distinct labels). It was collected and shared for the [Neural Information Processing Scaled for Bioacoustics: NIPS4B](http://sabiod.univ-tln.fr/nips4b/challenge1.html).
+This dataset consists of songs and calls of 51 bird species (87 distinct labels). This dataset was originally compiled and shared by by Morfi et al. in [NIPS4Bplus: a richly annotated birdsong audio dataset](https://peerj.com/articles/cs-223.pdf)
 
-686 audio files, with multiple labels per recording, recorded with a sampling rate of 44100. Recording length varies from just above 1 second to just above 5 seconds.
+It contains 686 audio files, with multiple labels per recording, recorded with a sampling rate of 44100. Recording length varies from just above 1 second to just above 5 seconds. The total duration of audio is around 1 hour.
 
 This dataset can be downloaded from Internet Archive [here](https://archive.org/download/bird_songs).
 
