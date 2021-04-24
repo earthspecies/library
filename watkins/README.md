@@ -10,7 +10,7 @@ The database is organized into three subsets: Best of' cuts, All cuts, and Maste
 
 ## Dataset information
 
-We chose to explore the 'Best of' subset of the [Watkins Marine Mammal Sound Database, Woods Hole Oceanographic Institution](https://cis.whoi.edu/science/B/whalesounds/index.cfm), which contains 1476 recordings, over 4 hours of audio, across 29 marine mammal species. The majority of the recordings are short, on the order of seconds. Out of 1476 recordings, only forty are longer than 2 minutes.
+We chose to explore the 'Best of' subset of the [Watkins Marine Mammal Sound Database, Woods Hole Oceanographic Institution](https://cis.whoi.edu/science/B/whalesounds/index.cfm), which contains 1697 recordings, over 4 hours of audio, across 32 marine mammal species. The majority of the recordings are short, on the order of seconds. Out of 1697 recordings, only forty three are longer than a minute.
 
 Data is available for download from Internet Archive as [a single zip file](https://archive.org/download/watkins_202104/watkins.zip). This dataset contains only file level labels.
 
