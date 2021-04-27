@@ -1,6 +1,7 @@
 Exploring Egyptian Fruit Bat Vocalizations:
 ===
-This repository can serve as a brief introduction to working with the [Egyptian fruit bat datasets](https://www.nature.com/articles/sdata2017143). The full dataset contains ~300k vocalization samples,
+This repository can serve as a brief introduction to working with [An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny](https://figshare.com/collections/An_annotated_dataset_of_Egyptian_fruit_bat_vocalizations_across_varying_contexts_and_during_vocal_ontogeny/3666502/2) collected by Prat, Y., Taub, M., Pratt, E., & Yovel, Y.. (2017).
+The full dataset contains ~300k vocalization samples,
 ~90k of which are annotated. 
 
 * In the script `efb_context_labeler.ipynb`, we train a resnet model to predict
@@ -14,9 +15,9 @@ the context of a vocalization interaction from a subset of the annotated dataset
 
 The Data:
 ===
-The original bat vocalization data was recorded and labeled by [Yossi Yovel](http://www.yossiyovel.com/index.php/publications) and his team. This data set must have taken an incredible amount of work, with 300k unique vocalizations recorded and 90k labeled annotations, and we are so thankful to be able to use it! You can view the original paper publishing the data [here](https://www.nature.com/articles/sdata2017143). 
+The dataset consists of 300k unique vocalization recordings and 90k labeled annotations.
 
-The data are split up into three lumps, one set containing everything from the source, another containing just the annotations, and another containing a small subset of the annotated data. The larger two datasets are quite large even in a zipped archive format (so be prepared to wait!) and have to be accessed using 7zip (since the files were 7zipped from the Figshare source). The script `efb_context_labeler.ipynb` shows how to download the data locally using `wget` and `7z`. 
+The data are split up into three subsets: one set containing everything from the source, another containing just the annotations, and another containing a small subset of the annotated data. The larger two datasets are quite large even in a zipped archive format (so be prepared to wait!) and have to be accessed using 7zip (since the files were 7zipped from the Figshare source). The script `efb_context_labeler.ipynb` shows how to download the data locally using `wget` and `7z`. 
 
 1. The full vocalization dataset can be found [here](https://archive.org/details/egyptian_fruit_bat) (~200 GiB unzipped)
 
@@ -24,7 +25,7 @@ The data are split up into three lumps, one set containing everything from the s
 
 3. A "tiny" subset of the annotated vocalizations can be found [here](https://archive.org/details/egyptian_fruit_bat_annotated_tiny) (~10 GiB unzipped)
 
-All of the subsets of the original data are split up in the same way:
+All of the subsets of the original data are organized in the same way:
 ```
 Egyptian_fruit_bat_unzipped
 ├── Annotations.csv
@@ -64,7 +65,9 @@ Egyptian_fruit_bat_unzipped
 
 The directories `files###` are where the WAV-type audio vocalizations are stored, and the csv's are where the file info and annotations can be found. The file `better_annotations.csv` does not actually make the annotations any better than they already are, it simply joins the information contained in the original `Annotations.csv` with the file information in `FileInfo.csv`. (Joining the file ID and annotations for each file with the file name and path so that we can more easily grab the annotations for each file) 
 
-> Prat, Yosef; Taub, Mor; Pratt, Ester; Yovel, Yossi (2017): An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny. figshare. Collection. https://doi.org/10.6084/m9.figshare.c.3666502.v2
+Cite this Data:
+===
+Prat, Y., Taub, M., Pratt, E., & Yovel, Y.. (2017). An annotated dataset of Egyptian fruit bat vocalizations across varying contexts and during vocal ontogeny (Version 2). figshare. https://doi.org/10.6084/m9.figshare.c.3666502.v2
 
 Explorations:
 ===
