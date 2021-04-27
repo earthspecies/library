@@ -8,15 +8,19 @@ The [dog (Canis familiaris)](https://en.wikipedia.org/wiki/Dog) is a domesticate
 
 ## Dataset information
 
-This dataset consists of 693 recordings of dog barks. 10 adult dogs, Canis familiaris, of six breeds have been recorded in three different situations:
+This dataset was collected by Sophia Yin and Brenda McCowan for [“Barking in domestic dogs: context specificity and individual identification.”](https://doi.org/10.1016/j.anbehav.2003.07.016) Animal Behaviour 68 (2004): 343-355. 
+
+The dataset consists of 693 recordings of dog barks from 10 adult dogs. Dogs were recorded in three contexts: 
 
 1. a disturbance situation in which a stranger rang the doorbell
 2. an isolation situation in which the dog was locked outside or in a room isolated from its owner
 3. a play situation in which either two dogs or a human and a dog played together
 
-This dataset was collected and served as a basis for the work published in the ["Barking in domestic dogs: context specificity and individual identification"](https://www.sciencedirect.com/science/article/abs/pii/S000334720400123X) paper by Sophia Yin and Brenda McCowan.
-
 You can download the preprocessed dataset [here](https://archive.org/details/dog_barks). The raw dataset can be found [here](https://archive.org/details/dog-barks-raw).
+
+## Cite this collection
+
+Yin, S. and B. McCowan. “Barking in domestic dogs: context specificity and individual identification.” Animal Behaviour 68 (2004): 343-355. 
 
 ## Table of contents
 
