@@ -1,4 +1,4 @@
-# zebra_finch
+# zebra finch
 
 The zebra finch (Taeniopygia guttata) is a highly vocal social songbird that relies on a set of 11 call types to communicate different behavioral states, intents or needs. The dataset was collected by researcher Julie E. Elie between 2011 and 2014 at University of California Berkeley using birds bred in the colony of the [Theunissen Lab](https://github.com/theunissenlab). 
 
