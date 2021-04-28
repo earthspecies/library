@@ -14,6 +14,9 @@ We chose to explore the 'Best of' subset of the [Watkins Marine Mammal Sound Dat
 
 Data is available for download from Internet Archive as [a single zip file](https://archive.org/download/watkins_202104/watkins.zip). This dataset contains only file level labels.
 
+## Cite this Collection
+Sound files on this website are free to download for personal or academic (not commercial) use. Sound files and associated metadata should be credited as follows: “Watkins Marine Mammal Sound Database, Woods Hole Oceanographic Institution.”
+
 ## Table of contents
 
 1. [How to download the dataset](https://github.com/earthspecies/library/blob/main/watkins/01_Download_Dataset.ipynb).
