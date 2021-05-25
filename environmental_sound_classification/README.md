@@ -23,6 +23,6 @@ All the recordings are single channel and have been recorded with a sampling rat
 
 ## Table of contents
 
-1. [How to download the dataset](https://github.com/earthspecies/library.internal/blob/main/geladas/01_Download_Dataset.ipynb).
-2. [Data Exploration](https://github.com/earthspecies/library.internal/blob/main/geladas/99_Data_Preprocessing.ipynb).
-3. [Data Preprocessing]()
+1. [How to download the dataset](https://github.com/earthspecies/library/blob/main/environmental_sound_classification/01_Download_Dataset.ipynb).
+2. [Data Exploration](https://github.com/earthspecies/library/blob/main/environmental_sound_classification/02_Data_Exploration.ipynb).
+3. [Data Preprocessing](https://github.com/earthspecies/library/blob/main/environmental_sound_classification/99_Data_Preprocessing.ipynb)
