@@ -1,4 +1,4 @@
-# tropical soundscapes
+# tropical soundscape
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Puerto_Rico_El_Yunque_1.jpg" width="120" align="left">
 
