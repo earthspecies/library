@@ -10,7 +10,7 @@ These were collected from 733 sites in Puerto Rico, using Audiomoth recorders. T
 
 This dataset was created from the train portion of data used for [the Rainforest Connection Species Audio Detection Kaggle competition](https://www.kaggle.com/c/rfcx-species-audio-detection/overview). We preprocess the data to make it more amenable to being fed into a DL pipeline.
 
-This dataset is made valuable under the following terms: ["You may access and use the Competition Data for non-commercial purposes only, including for participating in the Competition and on Kaggle.com forums, and for academic research and education."](https://www.kaggle.com/c/rfcx-species-audio-detection/rules)
+This dataset is made valuable under the [following terms](https://www.kaggle.com/c/rfcx-species-audio-detection/rules): "You may access and use the Competition Data for non-commercial purposes only, including for participating in the Competition and on Kaggle.com forums, and for academic research and education."
 
 
 ## Dataset information
