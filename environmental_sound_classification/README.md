@@ -14,12 +14,16 @@ Clips in this dataset have been manually extracted from public field recordings 
 
 A more thorough description of the dataset is available in the [original paper](http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf). This dataset is shared on GitHub [at this location](https://github.com/karolpiczak/ESC-50).
 
+The dataset is available under the terms of the [Creative Commons license - Attribution-NonCommercial](http://creativecommons.org/licenses/by-nc/3.0/).
 
 ## Dataset information
 
 This dataset consists of 2000 5-second recordings. The recordings were sampled across 50 classes and the dataset is balanced - 40 recordings are provided for each of the classes.
 
 All the recordings are single channel and have been recorded with a sampling rate of 44.1 kHz.
+
+## Cite this collection
+Karol J. Piczak. 2015. ESC: Dataset for Environmental Sound Classification. In Proceedings of the 23rd ACM international conference on Multimedia (MM '15). Association for Computing Machinery, New York, NY, USA, 1015–1018. DOI:https://doi.org/10.1145/2733373.2806390
 
 ## Table of contents
 
