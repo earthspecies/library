@@ -1,12 +1,12 @@
 # An Introduction
 
-Fieldwork is an essential component of the work to decode animal language and communication.  Collectively, biologists have lifetimes of invaluable observations from the field, but most of these recordings – scattered across hard drives, old tapes, and hidden servers – may be difficult to access. Further, bioacoustic recordings often include a medley of biophony, geophony, and anthropophony which make it hard to get to a starting point where you can begin experimentation. And, commonly, datasets are hand-labelled which may lead to human error. The Earth Species Library is an open and free repository that pulls together all of these incredible observations, documents them, and makes them ready for machine learning.
+Fieldwork is an essential component of the work to decode non-human language and communication.  Collectively, biologists have lifetimes of invaluable observations from the field, but most of these recordings – scattered across cloud storage, hard drives, old tapes, and hidden servers – may be difficult to access. Further, bioacoustic recordings often include a medley of biophony, geophony, and anthropophony which make it hard to get to a starting point where you can begin experimentation. And, commonly, datasets are hand-labelled which may lead to human error. The Earth Species Library is an open and free repository that pulls together all of these incredible observations, documents them, and makes them ready for machine learning.
 
 # Acknowledgements
 
 A major roadblock in translating animal communication is having enough of the right kinds of data with the right kinds of annotations. No matter how advanced the algorithm, the quality of what they learn derives from the quality of the data from which they learn. It is often a well-tailored dataset, with well-tailored annotations, that is the driving force behind advanced machine learning breakthroughs.
 
-Fieldwork can be very challenging, requiring great passion, teamwork, perserverance and grit. We are very grateful to scientists for this work, which is essential for our mission to decode animal communication and language. Thank you.
+Fieldwork can be very challenging, requiring great passion, teamwork, perserverance and grit. We are very grateful to scientists for this work, which is essential for our mission to decode non-human communication and language. Thank you.
 
 # Datasets
 
