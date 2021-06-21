@@ -1,4 +1,4 @@
-# Chimpanzees vocalizations
+# Chimpanzee vocalizations
 
 <img align= "left" height="150" src="https://github.com/desai-nisarg/Chimpanzees/blob/main/Sheldon.jpeg?raw=true">
 <br/>
