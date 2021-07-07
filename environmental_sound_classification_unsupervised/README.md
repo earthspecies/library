@@ -14,6 +14,6 @@ The ESC dataset is a collection of short environmental recordings available in a
 
 ## Table of contents
 
-1. [How to download the dataset](https://github.com/earthspecies/library/blob/main/environmental_sound_classification/01_Download_Dataset.ipynb).
-2. [Data Exploration](https://github.com/earthspecies/library/blob/main/environmental_sound_classification/02_Data_Exploration.ipynb).
-3. [Data Preprocessing](https://github.com/earthspecies/library/blob/main/environmental_sound_classification/99_Data_Preprocessing.ipynb)
+1. [How to download the dataset](https://github.com/earthspecies/library/blob/main/environmental_sound_classification_unsupervised/01_Download_Dataset.ipynb).
+2. [Data Exploration](https://github.com/earthspecies/library/blob/main/environmental_sound_classification_unsupervised/02_Data_Exploration.ipynb).
+3. [Data Preprocessing](https://github.com/earthspecies/library/blob/main/environmental_sound_classification_unsupervised/99_Data_Preprocessing.ipynb)
