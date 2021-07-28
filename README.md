@@ -18,5 +18,3 @@ The Earth Species Library is a diverse collection of multi-modal (primarily acou
 | [Egyptian Fruit Bat](https://github.com/earthspecies/library/tree/main/egyptian_fruit_bat)  | 300,000 unique vocalizations recorded and 90k labeled annotations.  | Included is predicting interaction context using a pretrained resnet model. |
 | [Giant Otter](https://github.com/earthspecies/library/tree/main/giant_otter) | 441 recordings among 22 distinct vocalization types. | Includes a classifier. |
 | [Macaques Monkeys](https://github.com/earthspecies/library/tree/main/macaques) | 7285 macaque coo calls from 8 individuals (4 males and 4 females) | Includes a [tutorial](https://github.com/earthspecies/open_collaboration_on_audio_classification) to predict identity from voice. |
-
-For an up-to-date list of the publicly available the datasets, visit [here](https://github.com/earthspecies/library). 
