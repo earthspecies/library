@@ -4,6 +4,7 @@ channels:
   - pytorch
   - defaults
 dependencies:
+  - pathlib2
   - librosa >=0.7.2
   - pytorch >=1.3.0
   - jupyter
