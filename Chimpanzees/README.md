@@ -21,6 +21,6 @@ Desai, Nisarg P., Pawel Fedurek, Katie E. Slocombe, and Michael L. Wilson. "Chim
 
 ## Table of contents
 
-1. [How to download the dataset]().
+1. [How to download the dataset](https://github.com/desai-nisarg/library/blob/chimpanzees/Chimpanzees/01_Download_Dataset.ipynb).
 2. [How to construct PyTorch dataloaders]().
 3. [How the original dataset was preprocessed (with a documentation of all the steps taken)]().
